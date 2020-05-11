@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPProject", "ASPProject\ASPProject.csproj", "{9CB92915-9F02-4D98-B496-933AC81CD5C2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7464A7BB-4E6C-4732-9D1E-92CA6E005441}"
+	ProjectSection(SolutionItems) = preProject
+		Appsettings.json = Appsettings.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
