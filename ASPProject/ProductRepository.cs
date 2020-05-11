@@ -24,5 +24,10 @@ namespace ASPProject
             return (Product)_conn.QuerySingle<Product>("SELECT * FROM PRODUCTS WHERE PRODUCTID = @id",
                 new { id = id });
         }
+        public void UpdateProduct(Product product)//snubbed-out method
+        {
+            _conn.Execute("UPDATE products SET Name = @name, Price = @price WHERE ProductID = @id",
+                new { name = product.Name, price = product.Price, id = product.ProductID });
+        }
     }
 }
