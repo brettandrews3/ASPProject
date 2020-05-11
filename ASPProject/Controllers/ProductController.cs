@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASPProject.Controllers
 {
+    //Automagically passes into this constructor when we start the app
     public class ProductController : Controller
     {
         private readonly IProductRepository repo;
@@ -17,12 +18,20 @@ namespace ASPProject.Controllers
             this.repo = repo;
         }
 
-        // GET: /<controller>/
+        // GET: /<controller>/; returns that View file for us from the Product folder
         public IActionResult Index()
         {
             var products = repo.GetAllProducts();
 
             return View(products);
+        }
+
+        //Each method needs to have a View of the same name
+        public IActionResult ViewProduct(int id)
+        {
+            var product = repo.GetProduct(id);
+
+            return View(product);
         }
     }
 }
