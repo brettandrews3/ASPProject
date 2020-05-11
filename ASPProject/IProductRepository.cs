@@ -16,5 +16,7 @@ namespace ASPProject
         public void InsertProduct(Product productToInsert);
         public IEnumerable<Category> GetCategories();
         public Product AssignCategory();
+        //Finally, we arrange code to DELETE products:
+        public void DeleteProduct(Product product);
     }
 }

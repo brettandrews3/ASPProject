@@ -72,5 +72,13 @@ namespace ASPProject.Controllers
 
             return RedirectToAction("Index");
         }
+
+        //Finally, we DELETE products from the database:
+        public IActionResult DeleteProduct(Product product)
+        {
+            repo.DeleteProduct(product);
+
+            return RedirectToAction("Index");
+        }
     }
 }

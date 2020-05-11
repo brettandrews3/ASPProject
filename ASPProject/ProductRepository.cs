@@ -51,5 +51,16 @@ namespace ASPProject
 
             return product;
         }
+
+        //Finally, we arrange to DELETE products:
+        public void DeleteProduct(Product product)
+        {
+            _conn.Execute("DELETE FROM Reviews WHERE ProductID = @id;",
+                new { id = product.ProductID });
+            _conn.Execute("DELETE FROM Sales WHERE ProductID = @id;",
+                new { id = product.ProductID });
+            _conn.Execute("DELETE FROM Products WHERE ProductID = @id;",
+                new { id = product.ProductID });
+        }
     }
 }
